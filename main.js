@@ -44,13 +44,13 @@ const userID = userInput.userID;
 const userPin = userInput.userPin;
 const enteredAmount = userInput.amount;
 if ((userID && userPin) && userInput.transactionType === "balance inquirey") {
-    const userBalance = Math.floor(Math.random() * 10000);
-    console.log("your current balance is Rs ${userBalance}\n");
+    const userBalance = Math.floor(Math.random() * 100000);
+    console.log(`"your current balance is Rs ${userBalance}\n"`);
 }
 else if (userID && userPin) {
-    const userBalance2 = Math.floor(Math.random() * 10000);
+    const userBalance2 = Math.floor(Math.random() * 100000);
     if (userBalance2 > enteredAmount) {
-        console.log("your account has been debited with Rs ${enteredAmount} and your remaining balance is ${userBalance2 - enteredAmount}");
+        console.log(`"your account has been debited with Rs ${enteredAmount} and your remaining balance is ${userBalance2 - enteredAmount}"`);
     }
     else {
         console.log("\n unsuuficient Balance");
